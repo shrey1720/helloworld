@@ -8,38 +8,6 @@
 </head>
 <body>
     <div class="animated-box"></div>
+    <link rel="animated" href="animated.css">
 </body>
 </html>
-/* Set background color and center content */
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-}
-
-/* Animated box */
-.animated-box {
-    width: 100px;
-    height: 100px;
-    background-color: #3498db;
-    animation: moveAnimation 5s infinite alternate;
-}
-
-/* Animation keyframes */
-@keyframes moveAnimation {
-    0% {
-        transform: translateX(0);
-        background-color: #3498db; /* Blue */
-    }
-    50% {
-        transform: translateX(300px); /* Move 300px to the right */
-        background-color: #e74c3c; /* Red */
-    }
-    100% {
-        transform: translateX(0);
-        background-color: #2ecc71; /* Green */
-    }
-}
