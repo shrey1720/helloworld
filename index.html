@@ -3,56 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>Full Animation Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form action="" method="get"></form>
-  <header>  <h1>Registration for Marathon!</h1></header>
-  <main>
-    <p>
-        <label for="first name">First Name</label>
-        <input type="text"name="first name"id="first name"placeholder="enter your name"required>
-    </p>
-    <p>
-        <label for="last name">Last Name</label>
-        <input type="text"name="last name"id="last name"placeholder="enter your last name"required>
-    </p>
-    <p>
-    <legend>Select a Race:</legend>
-</p>
-<div><input type="radio"name="race"id="fun run"value="fun run">
-    <label for="fun run">Fun Run 5k</label>
-</div>
-<div>
-    <input type="radio"name="race"id="half"value="half">
-    <label for="half">Half Marathon</label>
-</div>
-<div>
-    <input type="radio" name="race" id="full"value="full">
-    <label for="full">Full Marathon</label>
-</div>
-<p>
-    <label for="email">email address</label>
-    <input type="email"name="email"id="email"placeholder="enter your email"required>
-</p>
-<p>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password"minlength="4"required>
-</p>
-<p>
-    <label for="age">Select age group</label>
-    <select name="age" id="age">
-        <option value="">select your age group</option>
-        <option value="under 18">under 18</option>
-        <option value="18 to 35">18 to 35</option>
-        <option value="36 to 50">35 to 50</option>
-        <option value="50+">above 50</option>
-    </select>
-</p>
-<p>
-   <input type="submit" value="submit">
-</p>
-  </main>
-    
+    <div class="animated-box"></div>
 </body>
 </html>
+/* Set background color and center content */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* Animated box */
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    animation: moveAnimation 5s infinite alternate;
+}
+
+/* Animation keyframes */
+@keyframes moveAnimation {
+    0% {
+        transform: translateX(0);
+        background-color: #3498db; /* Blue */
+    }
+    50% {
+        transform: translateX(300px); /* Move 300px to the right */
+        background-color: #e74c3c; /* Red */
+    }
+    100% {
+        transform: translateX(0);
+        background-color: #2ecc71; /* Green */
+    }
+}
